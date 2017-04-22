@@ -26,8 +26,8 @@ public enum HaxeModifierType {
   INLINE("inline"),
   FINAL("@:final"),
   IS_VAR("@:isVar"),
-  DEPRECATED("@:deprecated");
-
+  DEPRECATED("@:deprecated"),
+  NO_COMPLETION("@:noCompletion");
 
   public String s;
 

@@ -378,8 +378,10 @@ class ClassChecker {
         if (!intMethod.isStatic()) {
           HaxeMethodModel selfMethod = clazz.getMethodSelf(intMethod.getName());
           if (selfMethod == null) {
-            missingMethods.add(intMethod);
-            missingMethodsNames.add(intMethod.getName());
+            if (!intMethod.getModifiers().hasModifier(HaxeModifierType.NO_COMPLETION)) {
+              missingMethods.add(intMethod);
+              missingMethodsNames.add(intMethod.getName());
+            }
           }
           else {
             MethodChecker.checkMethodsSignatureCompatibility(selfMethod, intMethod, holder);
