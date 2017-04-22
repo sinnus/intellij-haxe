@@ -236,8 +236,8 @@
   <fileset id="gen.haxefiles" dir="." includes="${gen.haxepath}/**"/>
   <fileset id="gen.hxmlfiles" dir="." includes="${gen.hxmlpath}/**"/>
 
-  <property name="grammar.haxe" value="./grammar/haxe.bnf"/>
-  <property name="grammar.hxml" value="./src/common/com/intellij/plugins/haxe/hxml/hxml.bnf"/>
+  <property name="grammar.haxe" value=".\grammar\haxe.bnf"/>
+  <property name="grammar.hxml" value=".\src\common\com\intellij\plugins\haxe\hxml\hxml.bnf"/>
 
   <target name="checkHaxeRegenNeeded" >
     <mkdir dir="${gen.haxepath}"/> <!-- need the path so srcfiles doesn't fail -->
